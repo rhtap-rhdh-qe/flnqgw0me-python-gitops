@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: flnqgw0me-python-gitops
+  description: This is GitOps manifest for flnqgw0me-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: flnqgw0me-python
+    janus-idp.io/tekton: flnqgw0me-python 
+    backstage.io/kubernetes-id: flnqgw0me-python 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:flnqgw0me-python
